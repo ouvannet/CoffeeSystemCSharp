@@ -21,7 +21,6 @@ namespace FinalProject
         {
             this.Hide();
             new mainPage().Show();
-            this.Close();
         }
     }
 }
