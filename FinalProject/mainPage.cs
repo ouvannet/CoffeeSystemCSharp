@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form1 : Form
+    public partial class mainPage : Form
     {
-        public Form1()
+        public mainPage()
         {
             InitializeComponent();
         }
 
-        private void btn_submit_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new mainPage().Show();
-            this.Close();
+
         }
     }
 }
