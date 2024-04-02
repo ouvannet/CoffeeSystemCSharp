@@ -31,5 +31,10 @@ namespace FinalProject
         {
 
         }
+
+        private void btn_purchas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
