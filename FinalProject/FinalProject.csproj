@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs">
@@ -75,6 +79,12 @@
     </Compile>
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCard.Designer.cs">
+      <DependentUpon>ProductCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Products.cs">
       <SubType>Form</SubType>
@@ -110,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCard.resx">
+      <DependentUpon>ProductCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products.resx">
       <DependentUpon>Products.cs</DependentUpon>

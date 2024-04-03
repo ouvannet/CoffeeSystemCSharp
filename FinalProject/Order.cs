@@ -16,5 +16,20 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void tblOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+        }
+
+        private void Order_Load(object sender, EventArgs e)
+        {
+            foreach (DataGridViewColumn column in tblOrder.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
     }
 }
