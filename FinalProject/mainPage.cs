@@ -31,5 +31,14 @@ namespace FinalProject
         {
 
         }
+
+        private void btn_purchas_Click(object sender, EventArgs e)
+        {
+            Purchase pch = new Purchase();
+            pch.TopLevel = false;
+            pch.Dock = DockStyle.Fill;
+            panelBody.Controls.Add(pch);
+            pch.Show();
+        }
     }
 }
