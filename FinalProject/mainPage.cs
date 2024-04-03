@@ -31,14 +31,53 @@ namespace FinalProject
         {
 
         }
-
-        private void btn_purchas_Click(object sender, EventArgs e)
+        public void addtopanel(Form pch)
         {
-            Purchase pch = new Purchase();
+            panelBody.Controls.Clear();
+
             pch.TopLevel = false;
             pch.Dock = DockStyle.Fill;
             panelBody.Controls.Add(pch);
             pch.Show();
+        }
+        private void btn_purchas_Click(object sender, EventArgs e)
+        {
+            Purchase pch = new Purchase();
+            addtopanel(pch);
+        }
+
+        private void panelBody_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_orders_Click(object sender, EventArgs e)
+        {
+            Order od = new Order();
+            addtopanel(od);
+        }
+
+        private void btn_payments_Click(object sender, EventArgs e)
+        {
+            Payment pm = new Payment();
+            addtopanel(pm);
+        }
+
+        private void btn_users_Click(object sender, EventArgs e)
+        {
+            User us = new User();
+            addtopanel(us);
+        }
+
+        private void btn_products_Click(object sender, EventArgs e)
+        {
+            Products pd = new Products();
+            addtopanel(pd);
         }
     }
 }
