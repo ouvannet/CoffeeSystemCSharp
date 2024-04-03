@@ -36,8 +36,9 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.productCard = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,11 @@
             this.price,
             this.Fees,
             this.Status});
-            this.tblOrder.Location = new System.Drawing.Point(398, 542);
+            this.tblOrder.Location = new System.Drawing.Point(448, 542);
             this.tblOrder.Name = "tblOrder";
             this.tblOrder.RowHeadersWidth = 51;
             this.tblOrder.RowTemplate.Height = 24;
-            this.tblOrder.Size = new System.Drawing.Size(1164, 388);
+            this.tblOrder.Size = new System.Drawing.Size(1114, 388);
             this.tblOrder.TabIndex = 37;
             this.tblOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellContentClick);
             // 
@@ -116,12 +117,12 @@
             this.Status.Name = "Status";
             this.Status.Width = 71;
             // 
-            // panel1
+            // productCard
             // 
-            this.panel1.Location = new System.Drawing.Point(398, 126);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1164, 390);
-            this.panel1.TabIndex = 38;
+            this.productCard.Location = new System.Drawing.Point(448, 103);
+            this.productCard.Name = "productCard";
+            this.productCard.Size = new System.Drawing.Size(1114, 413);
+            this.productCard.TabIndex = 38;
             // 
             // label2
             // 
@@ -133,13 +134,21 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Product";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(56, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(363, 826);
+            this.panel1.TabIndex = 39;
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1619, 942);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.productCard);
             this.Controls.Add(this.tblOrder);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -162,7 +171,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fees;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel productCard;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
