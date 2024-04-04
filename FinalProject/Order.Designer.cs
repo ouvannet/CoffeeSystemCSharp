@@ -36,9 +36,11 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productCard = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.productFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.billFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +50,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(49, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 39);
+            this.label1.Size = new System.Drawing.Size(117, 39);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Order Management";
+            this.label1.Text = "Billing";
             // 
             // tblOrder
             // 
@@ -63,11 +65,11 @@
             this.price,
             this.Fees,
             this.Status});
-            this.tblOrder.Location = new System.Drawing.Point(448, 542);
+            this.tblOrder.Location = new System.Drawing.Point(448, 558);
             this.tblOrder.Name = "tblOrder";
             this.tblOrder.RowHeadersWidth = 51;
             this.tblOrder.RowTemplate.Height = 24;
-            this.tblOrder.Size = new System.Drawing.Size(1114, 388);
+            this.tblOrder.Size = new System.Drawing.Size(1114, 372);
             this.tblOrder.TabIndex = 37;
             this.tblOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellContentClick);
             // 
@@ -117,38 +119,60 @@
             this.Status.Name = "Status";
             this.Status.Width = 71;
             // 
-            // productCard
-            // 
-            this.productCard.Location = new System.Drawing.Point(448, 103);
-            this.productCard.Name = "productCard";
-            this.productCard.Size = new System.Drawing.Size(1114, 413);
-            this.productCard.TabIndex = 38;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(391, 47);
+            this.label2.Location = new System.Drawing.Point(441, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 39);
             this.label2.TabIndex = 39;
             this.label2.Text = "Product";
             // 
-            // panel1
+            // productFlow
             // 
-            this.panel1.Location = new System.Drawing.Point(56, 104);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(363, 826);
-            this.panel1.TabIndex = 39;
+            this.productFlow.Location = new System.Drawing.Point(448, 104);
+            this.productFlow.Name = "productFlow";
+            this.productFlow.Size = new System.Drawing.Size(1114, 385);
+            this.productFlow.TabIndex = 40;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(56, 790);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(363, 46);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Print Receipt";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // billFlow
+            // 
+            this.billFlow.Location = new System.Drawing.Point(56, 104);
+            this.billFlow.Name = "billFlow";
+            this.billFlow.Size = new System.Drawing.Size(363, 655);
+            this.billFlow.TabIndex = 41;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(447, 505);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(326, 39);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Order Management";
             // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1619, 942);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.billFlow);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.productFlow);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.productCard);
             this.Controls.Add(this.tblOrder);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,8 +195,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fees;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel productCard;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel productFlow;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel billFlow;
+        private System.Windows.Forms.Label label3;
     }
 }

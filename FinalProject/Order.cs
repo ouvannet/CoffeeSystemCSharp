@@ -30,6 +30,23 @@ namespace FinalProject
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
+
+            
+            
+            productFlow.AutoScroll = true;
+            billFlow.AutoScroll = true;
+
+            for (int i = 0; i < 10; i++)
+            {
+                
+                ProductCard userControl = new ProductCard();
+                Billcard bill = new Billcard();
+
+                billFlow.Controls.Add(bill);
+                productFlow.Controls.Add(userControl);
+            }
+
+
         }
     }
 }
