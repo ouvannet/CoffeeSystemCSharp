@@ -79,5 +79,11 @@ namespace FinalProject
             Products pd = new Products();
             addtopanel(pd);
         }
+
+        private void btn_overview_Click(object sender, EventArgs e)
+        {
+            Overview ov = new Overview();
+            addtopanel(ov);
+        }
     }
 }
