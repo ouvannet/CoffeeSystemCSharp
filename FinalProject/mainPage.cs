@@ -15,6 +15,8 @@ namespace FinalProject
         public mainPage()
         {
             InitializeComponent();
+            Overview ov = new Overview();
+            addtopanel(ov);
         }
 
         private void label4_Click(object sender, EventArgs e)

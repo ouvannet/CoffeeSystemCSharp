@@ -38,9 +38,17 @@ namespace FinalProject
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pn_left = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pn_right = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pn_left.SuspendLayout();
+            this.pn_right.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -131,11 +139,72 @@ namespace FinalProject
             this.label2.TabIndex = 0;
             this.label2.Text = "Flash Light Battery Coffee";
             // 
+            // pn_left
+            // 
+            this.pn_left.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pn_left.Controls.Add(this.panel5);
+            this.pn_left.Controls.Add(this.panel4);
+            this.pn_left.Controls.Add(this.panel1);
+            this.pn_left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pn_left.Location = new System.Drawing.Point(0, 0);
+            this.pn_left.Name = "pn_left";
+            this.pn_left.Padding = new System.Windows.Forms.Padding(10);
+            this.pn_left.Size = new System.Drawing.Size(393, 902);
+            this.pn_left.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(373, 291);
+            this.panel1.TabIndex = 0;
+            // 
+            // pn_right
+            // 
+            this.pn_right.AutoScroll = true;
+            this.pn_right.BackColor = System.Drawing.Color.Gainsboro;
+            this.pn_right.Controls.Add(this.panel6);
+            this.pn_right.Controls.Add(this.pn_left);
+            this.pn_right.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_right.Location = new System.Drawing.Point(0, 84);
+            this.pn_right.Name = "pn_right";
+            this.pn_right.Size = new System.Drawing.Size(1603, 902);
+            this.pn_right.TabIndex = 7;
+            this.pn_right.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_right_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(10, 321);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(373, 168);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(11, 510);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(371, 461);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(393, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1210, 902);
+            this.panel6.TabIndex = 4;
+            // 
             // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1603, 986);
+            this.Controls.Add(this.pn_right);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Overview";
@@ -147,6 +216,8 @@ namespace FinalProject
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pn_left.ResumeLayout(false);
+            this.pn_right.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -161,5 +232,11 @@ namespace FinalProject
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pn_right;
+        private System.Windows.Forms.Panel pn_left;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

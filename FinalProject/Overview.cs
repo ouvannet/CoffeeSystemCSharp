@@ -16,5 +16,10 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void pn_right_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
