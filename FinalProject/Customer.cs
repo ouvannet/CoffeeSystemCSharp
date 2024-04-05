@@ -21,7 +21,7 @@ namespace FinalProject
         {
             foreach (DataGridViewColumn column in tblCustomer.Columns)
             {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+               /* column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;*/
             }
         }
     }

@@ -12,7 +12,7 @@ namespace FinalProject
 {
     public partial class mainPage : Form
     {
-        public mainPage()
+        public mainPage(UserData user)
         {
             InitializeComponent();
             Overview ov = new Overview();
@@ -86,6 +86,12 @@ namespace FinalProject
         {
             Overview ov = new Overview();
             addtopanel(ov);
+        }
+
+        private void btn_customer_Click(object sender, EventArgs e)
+        {
+            Customer cs = new Customer();
+            addtopanel(cs);
         }
     }
 }

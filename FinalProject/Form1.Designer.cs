@@ -55,6 +55,7 @@ namespace FinalProject
             this.txt_user_name.Name = "txt_user_name";
             this.txt_user_name.Size = new System.Drawing.Size(555, 53);
             this.txt_user_name.TabIndex = 1;
+            this.txt_user_name.Text = "Name";
             // 
             // txt_password
             // 
@@ -63,6 +64,8 @@ namespace FinalProject
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(555, 53);
             this.txt_password.TabIndex = 2;
+            this.txt_password.Tag = "";
+            this.txt_password.Text = "Password";
             // 
             // ckb_s_p
             // 
