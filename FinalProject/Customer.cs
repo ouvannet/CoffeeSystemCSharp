@@ -26,7 +26,6 @@ namespace FinalProject
         private void InitializeDataGridView()
         {
             tblCustomer.AutoGenerateColumns = true;
-/*            tblCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
         }
         private void ConnectToDatabase()
         {
