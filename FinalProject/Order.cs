@@ -21,7 +21,6 @@ namespace FinalProject
         {
 
 
-
         }
 
         private void Order_Load(object sender, EventArgs e)
@@ -30,8 +29,6 @@ namespace FinalProject
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-
-            
             
             productFlow.AutoScroll = true;
             billFlow.AutoScroll = true;

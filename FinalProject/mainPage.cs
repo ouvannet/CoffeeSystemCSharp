@@ -1,12 +1,16 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace FinalProject
 {
@@ -86,6 +90,32 @@ namespace FinalProject
         {
             Overview ov = new Overview();
             addtopanel(ov);
+        }
+
+        private void mainPage_Load(object sender, EventArgs e)
+        {
+
+            string connectionString = "server=localhost;user=root;database=coffee_shop_system;port=3306;password=";
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                MessageBox.Show("Connected to MySQL database.");
+
+            
+
+                connection.Close();
+                Console.WriteLine("Connection closed.");
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }
+
+
+
+
         }
     }
 }
