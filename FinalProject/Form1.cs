@@ -63,7 +63,7 @@ namespace FinalProject
                         }
 
                         this.Hide();
-                        new mainPage(loggedInUser).Show();
+           /*             new mainPage(loggedInUser).Show();*/
                     }
                     else
                     {

@@ -12,7 +12,8 @@ namespace FinalProject
 {
     public partial class mainPage : Form
     {
-        public mainPage(UserData user)
+      /*  public mainPage(UserData user)*/
+        public mainPage()
         {
             InitializeComponent();
             Overview ov = new Overview();
