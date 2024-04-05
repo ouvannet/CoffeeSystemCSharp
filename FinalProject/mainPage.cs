@@ -102,7 +102,7 @@ namespace FinalProject
             try
             {
                 connection.Open();
-                MessageBox.Show("Connected to MySQL database.");
+            
 
                 string query = "SELECT * FROM user";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -111,9 +111,7 @@ namespace FinalProject
                 {
                     while (reader.Read())
                     {
-                        int id = reader.GetInt32("id");
-                        string name = reader.GetString("name");
-                        MessageBox.Show($"ID: {id}, Name: {name}");
+                       
                     }
                 }
 
