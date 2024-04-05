@@ -93,7 +93,6 @@ namespace FinalProject
             addtopanel(ov);
         }
 
-<<<<<<< HEAD
         private void mainPage_Load(object sender, EventArgs e)
         {
 
@@ -105,7 +104,20 @@ namespace FinalProject
                 connection.Open();
                 MessageBox.Show("Connected to MySQL database.");
 
-            
+                string query = "SELECT * FROM user";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32("id");
+                        string name = reader.GetString("name");
+                        MessageBox.Show($"ID: {id}, Name: {name}");
+                    }
+                }
+
+
 
                 connection.Close();
                 Console.WriteLine("Connection closed.");
@@ -114,16 +126,17 @@ namespace FinalProject
             {
                 Console.WriteLine("Error: " + ex.ToString());
             }
+        }
 
 
-
-
-=======
         private void btn_customer_Click(object sender, EventArgs e)
         {
             Customer cs = new Customer();
             addtopanel(cs);
->>>>>>> b82abbb966d6494284768c497d01e790706d222e
+
         }
     }
 }
+
+
+
