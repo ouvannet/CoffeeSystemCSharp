@@ -262,6 +262,7 @@ namespace FinalProject
             this.btn_customer.Text = "Customers";
             this.btn_customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_customer.UseVisualStyleBackColor = false;
+            this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
             // 
             // btn_payments
             // 

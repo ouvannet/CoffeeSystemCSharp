@@ -16,6 +16,7 @@ namespace FinalProject
 {
     public partial class mainPage : Form
     {
+      /*  public mainPage(UserData user)*/
         public mainPage()
         {
             InitializeComponent();
@@ -92,6 +93,7 @@ namespace FinalProject
             addtopanel(ov);
         }
 
+<<<<<<< HEAD
         private void mainPage_Load(object sender, EventArgs e)
         {
 
@@ -116,6 +118,12 @@ namespace FinalProject
 
 
 
+=======
+        private void btn_customer_Click(object sender, EventArgs e)
+        {
+            Customer cs = new Customer();
+            addtopanel(cs);
+>>>>>>> b82abbb966d6494284768c497d01e790706d222e
         }
     }
 }
