@@ -230,6 +230,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\coffee-brain-caffeine-neuroscincces.jpg" />
+    <None Include="Resources\delete %281%29.png" />
+    <None Include="Resources\Group 7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
