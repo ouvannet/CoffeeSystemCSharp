@@ -117,7 +117,7 @@ namespace FinalProject
                         command.Parameters.AddWithValue("@p_id", row.Cells["PID"].Value.ToString());
                         command.Parameters.AddWithValue("@qty", row.Cells["Qty"].Value.ToString());
 
-                        // Add parameters for other columns if needed
+                   
 
                         command.ExecuteNonQuery();
                     }
