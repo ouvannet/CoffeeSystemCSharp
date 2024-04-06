@@ -30,17 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tblOrder = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fees = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.productFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.billFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ref = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sell = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblOrder)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,10 +62,12 @@
             this.tblOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
-            this.customerid,
             this.date,
-            this.price,
-            this.Fees,
+            this.Ref,
+            this.Customer,
+            this.Sell,
+            this.Discount,
+            this.Total,
             this.Status});
             this.tblOrder.Location = new System.Drawing.Point(448, 558);
             this.tblOrder.Name = "tblOrder";
@@ -72,52 +76,6 @@
             this.tblOrder.Size = new System.Drawing.Size(1114, 372);
             this.tblOrder.TabIndex = 37;
             this.tblOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblOrder_CellContentClick);
-            // 
-            // name
-            // 
-            this.name.HeaderText = "ID";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 49;
-            // 
-            // customerid
-            // 
-            this.customerid.HeaderText = "CustomerID";
-            this.customerid.MinimumWidth = 6;
-            this.customerid.Name = "customerid";
-            this.customerid.ReadOnly = true;
-            this.customerid.Width = 106;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Date";
-            this.date.MinimumWidth = 6;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 65;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.MinimumWidth = 6;
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 67;
-            // 
-            // Fees
-            // 
-            this.Fees.HeaderText = "fee";
-            this.Fees.MinimumWidth = 6;
-            this.Fees.Name = "Fees";
-            this.Fees.Width = 55;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            this.Status.Width = 71;
             // 
             // label2
             // 
@@ -163,6 +121,64 @@
             this.label3.TabIndex = 42;
             this.label3.Text = "Order Management";
             // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.HeaderText = "ID";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date.HeaderText = "Date";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            // 
+            // Ref
+            // 
+            this.Ref.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ref.HeaderText = "Ref";
+            this.Ref.MinimumWidth = 6;
+            this.Ref.Name = "Ref";
+            // 
+            // Customer
+            // 
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Customer.HeaderText = "Customer";
+            this.Customer.MinimumWidth = 6;
+            this.Customer.Name = "Customer";
+            // 
+            // Sell
+            // 
+            this.Sell.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Sell.HeaderText = "Sell";
+            this.Sell.MinimumWidth = 6;
+            this.Sell.Name = "Sell";
+            // 
+            // Discount
+            // 
+            this.Discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Discount.HeaderText = "Discount";
+            this.Discount.MinimumWidth = 6;
+            this.Discount.Name = "Discount";
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,16 +205,18 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tblOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fees;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel productFlow;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel billFlow;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ref;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sell;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
