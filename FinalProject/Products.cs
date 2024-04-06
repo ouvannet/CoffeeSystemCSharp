@@ -134,10 +134,6 @@ namespace FinalProject
 
             connection.Close();
 
-
-
-
-
         }
 
         private void cboProductType_TextChanged(object sender, EventArgs e)
@@ -219,6 +215,11 @@ namespace FinalProject
             {
                 dgvListCbItem.Rows.Add(selectedListBoxItem.Value, selectedListBoxItem.DisplayName,1);
             }
+        }
+
+        private void dgvListCbItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     public class ListBoxItem

@@ -63,12 +63,12 @@
             this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pn_standard = new System.Windows.Forms.Panel();
             this.pn_combo = new System.Windows.Forms.Panel();
-            this.lsb_searchProduct = new System.Windows.Forms.ListBox();
-            this.cboSearchPro = new System.Windows.Forms.ComboBox();
             this.dgvListCbItem = new System.Windows.Forms.DataGridView();
             this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lsb_searchProduct = new System.Windows.Forms.ListBox();
+            this.cboSearchPro = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProduct)).BeginInit();
             this.pn_standard.SuspendLayout();
@@ -381,27 +381,6 @@
             this.pn_combo.TabIndex = 39;
             this.pn_combo.Visible = false;
             // 
-            // lsb_searchProduct
-            // 
-            this.lsb_searchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsb_searchProduct.FormattingEnabled = true;
-            this.lsb_searchProduct.ItemHeight = 25;
-            this.lsb_searchProduct.Location = new System.Drawing.Point(30, 68);
-            this.lsb_searchProduct.Name = "lsb_searchProduct";
-            this.lsb_searchProduct.Size = new System.Drawing.Size(281, 229);
-            this.lsb_searchProduct.TabIndex = 18;
-            this.lsb_searchProduct.SelectedIndexChanged += new System.EventHandler(this.lsb_searchProduct_SelectedIndexChanged);
-            // 
-            // cboSearchPro
-            // 
-            this.cboSearchPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSearchPro.FormattingEnabled = true;
-            this.cboSearchPro.Location = new System.Drawing.Point(30, 18);
-            this.cboSearchPro.Name = "cboSearchPro";
-            this.cboSearchPro.Size = new System.Drawing.Size(281, 44);
-            this.cboSearchPro.TabIndex = 17;
-            this.cboSearchPro.TextChanged += new System.EventHandler(this.cboSearchPro_TextChanged);
-            // 
             // dgvListCbItem
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -431,6 +410,7 @@
             this.dgvListCbItem.RowTemplate.Height = 24;
             this.dgvListCbItem.Size = new System.Drawing.Size(884, 282);
             this.dgvListCbItem.TabIndex = 19;
+            this.dgvListCbItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCbItem_CellContentClick);
             // 
             // PID
             // 
@@ -454,6 +434,27 @@
             this.Qty.HeaderText = "Quantity";
             this.Qty.MinimumWidth = 6;
             this.Qty.Name = "Qty";
+            // 
+            // lsb_searchProduct
+            // 
+            this.lsb_searchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsb_searchProduct.FormattingEnabled = true;
+            this.lsb_searchProduct.ItemHeight = 25;
+            this.lsb_searchProduct.Location = new System.Drawing.Point(30, 68);
+            this.lsb_searchProduct.Name = "lsb_searchProduct";
+            this.lsb_searchProduct.Size = new System.Drawing.Size(281, 229);
+            this.lsb_searchProduct.TabIndex = 18;
+            this.lsb_searchProduct.SelectedIndexChanged += new System.EventHandler(this.lsb_searchProduct_SelectedIndexChanged);
+            // 
+            // cboSearchPro
+            // 
+            this.cboSearchPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSearchPro.FormattingEnabled = true;
+            this.cboSearchPro.Location = new System.Drawing.Point(30, 18);
+            this.cboSearchPro.Name = "cboSearchPro";
+            this.cboSearchPro.Size = new System.Drawing.Size(281, 44);
+            this.cboSearchPro.TabIndex = 17;
+            this.cboSearchPro.TextChanged += new System.EventHandler(this.cboSearchPro_TextChanged);
             // 
             // Products
             // 

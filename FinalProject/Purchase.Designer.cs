@@ -33,6 +33,8 @@ namespace FinalProject
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +56,16 @@ namespace FinalProject
             this.payment_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payment_term = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblPurchaseItem = new System.Windows.Forms.DataGridView();
+            this.lsb_searchProduct = new System.Windows.Forms.ListBox();
+            this.searchProduct = new System.Windows.Forms.ComboBox();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchase_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblPurchase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblPurchaseItem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -279,11 +290,105 @@ namespace FinalProject
             this.payment_term.Name = "payment_term";
             this.payment_term.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // tblPurchaseItem
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblPurchaseItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.tblPurchaseItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblPurchaseItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PID,
+            this.purchase_id,
+            this.product_id,
+            this.Quantity,
+            this.Cost});
+            this.tblPurchaseItem.Location = new System.Drawing.Point(1200, 131);
+            this.tblPurchaseItem.Name = "tblPurchaseItem";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblPurchaseItem.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.tblPurchaseItem.RowHeadersWidth = 51;
+            this.tblPurchaseItem.RowTemplate.Height = 24;
+            this.tblPurchaseItem.Size = new System.Drawing.Size(407, 279);
+            this.tblPurchaseItem.TabIndex = 41;
+            // 
+            // lsb_searchProduct
+            // 
+            this.lsb_searchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsb_searchProduct.FormattingEnabled = true;
+            this.lsb_searchProduct.ItemHeight = 25;
+            this.lsb_searchProduct.Location = new System.Drawing.Point(913, 181);
+            this.lsb_searchProduct.Name = "lsb_searchProduct";
+            this.lsb_searchProduct.Size = new System.Drawing.Size(281, 229);
+            this.lsb_searchProduct.TabIndex = 40;
+            this.lsb_searchProduct.SelectedIndexChanged += new System.EventHandler(this.lsb_searchProduct_SelectedIndexChanged);
+            // 
+            // searchProduct
+            // 
+            this.searchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchProduct.FormattingEnabled = true;
+            this.searchProduct.Location = new System.Drawing.Point(913, 131);
+            this.searchProduct.Name = "searchProduct";
+            this.searchProduct.Size = new System.Drawing.Size(281, 44);
+            this.searchProduct.TabIndex = 39;
+            this.searchProduct.TabIndexChanged += new System.EventHandler(this.SearchProduct_TabIndexChanged);
+            this.searchProduct.TextChanged += new System.EventHandler(this.SearchProduct_TextChanged);
+            // 
+            // PID
+            // 
+            this.PID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PID.HeaderText = "ID";
+            this.PID.MinimumWidth = 6;
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            // 
+            // purchase_id
+            // 
+            this.purchase_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.purchase_id.HeaderText = "Purchase_id";
+            this.purchase_id.MinimumWidth = 6;
+            this.purchase_id.Name = "purchase_id";
+            this.purchase_id.ReadOnly = true;
+            // 
+            // product_id
+            // 
+            this.product_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.product_id.HeaderText = "Product_id";
+            this.product_id.MinimumWidth = 6;
+            this.product_id.Name = "product_id";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 125;
+            // 
+            // Cost
+            // 
+            this.Cost.HeaderText = "cost";
+            this.Cost.MinimumWidth = 6;
+            this.Cost.Name = "Cost";
+            this.Cost.Width = 125;
+            // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1619, 942);
+            this.Controls.Add(this.tblPurchaseItem);
+            this.Controls.Add(this.lsb_searchProduct);
+            this.Controls.Add(this.searchProduct);
             this.Controls.Add(this.tblPurchase);
             this.Controls.Add(this.btnCreatePurchase);
             this.Controls.Add(this.txtPaymentTerm);
@@ -300,6 +405,7 @@ namespace FinalProject
             this.Name = "Purchase";
             this.Text = "Purchase";
             ((System.ComponentModel.ISupportInitialize)(this.tblPurchase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblPurchaseItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +434,13 @@ namespace FinalProject
         private System.Windows.Forms.DataGridViewTextBoxColumn payment_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn payment_term;
+        private System.Windows.Forms.DataGridView tblPurchaseItem;
+        private System.Windows.Forms.ListBox lsb_searchProduct;
+        private System.Windows.Forms.ComboBox searchProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purchase_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn product_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
     }
 }
