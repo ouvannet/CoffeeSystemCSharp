@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cboBrand = new System.Windows.Forms.ComboBox();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.cboProductType = new System.Windows.Forms.ComboBox();
@@ -50,10 +50,17 @@
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.tblProduct = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brand_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Default_sale_unit_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Default_purchase_unit_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProduct)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +73,7 @@
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(387, 44);
             this.cboBrand.TabIndex = 18;
-            this.cboBrand.Text = "Brand";
+            this.cboBrand.Text = "Brand id";
             // 
             // cboCategory
             // 
@@ -76,7 +83,7 @@
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(387, 44);
             this.cboCategory.TabIndex = 17;
-            this.cboCategory.Text = "Category";
+            this.cboCategory.Text = "Category id";
             // 
             // cboProductType
             // 
@@ -155,7 +162,7 @@
             this.cboDefaultSaleUnit.Name = "cboDefaultSaleUnit";
             this.cboDefaultSaleUnit.Size = new System.Drawing.Size(387, 44);
             this.cboDefaultSaleUnit.TabIndex = 20;
-            this.cboDefaultSaleUnit.Text = "Default Sale Unit";
+            this.cboDefaultSaleUnit.Text = "Default Sale Unit id";
             // 
             // cboDefaultPurchaseUnit
             // 
@@ -165,7 +172,7 @@
             this.cboDefaultPurchaseUnit.Name = "cboDefaultPurchaseUnit";
             this.cboDefaultPurchaseUnit.Size = new System.Drawing.Size(387, 44);
             this.cboDefaultPurchaseUnit.TabIndex = 23;
-            this.cboDefaultPurchaseUnit.Text = "Default Purchase Unit";
+            this.cboDefaultPurchaseUnit.Text = "Default Purchase Unit id";
             // 
             // txtProductPrice
             // 
@@ -180,7 +187,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 497);
+            this.pictureBox1.Location = new System.Drawing.Point(882, 116);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 192);
             this.pictureBox1.TabIndex = 25;
@@ -190,7 +197,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 708);
+            this.label3.Location = new System.Drawing.Point(900, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 29);
             this.label3.TabIndex = 26;
@@ -200,7 +207,7 @@
             // 
             this.cboSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSupplier.FormattingEnabled = true;
-            this.cboSupplier.Location = new System.Drawing.Point(295, 497);
+            this.cboSupplier.Location = new System.Drawing.Point(1128, 116);
             this.cboSupplier.Name = "cboSupplier";
             this.cboSupplier.Size = new System.Drawing.Size(387, 44);
             this.cboSupplier.TabIndex = 27;
@@ -209,7 +216,7 @@
             // btnAddProduct
             // 
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(295, 564);
+            this.btnAddProduct.Location = new System.Drawing.Point(1128, 183);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(387, 46);
             this.btnAddProduct.TabIndex = 28;
@@ -220,47 +227,62 @@
             // tblProduct
             // 
             this.tblProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tblProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.type,
             this.name,
-            this.description,
-            this.phone,
-            this.email});
-            this.tblProduct.Location = new System.Drawing.Point(874, 118);
+            this.code,
+            this.brand_id,
+            this.Unit_id,
+            this.Default_sale_unit_id,
+            this.Default_purchase_unit_id,
+            this.Cost,
+            this.Price,
+            this.Image,
+            this.Supplier_id});
+            this.tblProduct.Location = new System.Drawing.Point(49, 487);
             this.tblProduct.Name = "tblProduct";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.tblProduct.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tblProduct.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.tblProduct.RowHeadersWidth = 30;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblProduct.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.tblProduct.RowTemplate.Height = 24;
-            this.tblProduct.Size = new System.Drawing.Size(715, 779);
+            this.tblProduct.Size = new System.Drawing.Size(1529, 779);
             this.tblProduct.TabIndex = 37;
             // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.DefaultCellStyle = dataGridViewCellStyle6;
             this.ID.FillWeight = 113.5829F;
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            // 
+            // type
+            // 
+            this.type.FillWeight = 113.5829F;
+            this.type.HeaderText = "Type";
+            this.type.MinimumWidth = 6;
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
             // 
             // name
             // 
@@ -270,29 +292,63 @@
             this.name.Name = "name";
             this.name.ReadOnly = true;
             // 
-            // description
+            // code
             // 
-            this.description.FillWeight = 113.5829F;
-            this.description.HeaderText = "Description";
-            this.description.MinimumWidth = 6;
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
+            this.code.FillWeight = 113.5829F;
+            this.code.HeaderText = "Code";
+            this.code.MinimumWidth = 6;
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
             // 
-            // phone
+            // brand_id
             // 
-            this.phone.FillWeight = 113.5829F;
-            this.phone.HeaderText = "Phone";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
+            this.brand_id.FillWeight = 113.5829F;
+            this.brand_id.HeaderText = "Brand_id";
+            this.brand_id.MinimumWidth = 6;
+            this.brand_id.Name = "brand_id";
+            this.brand_id.ReadOnly = true;
             // 
-            // email
+            // Unit_id
             // 
-            this.email.FillWeight = 113.5829F;
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
+            this.Unit_id.HeaderText = "unit_id";
+            this.Unit_id.MinimumWidth = 6;
+            this.Unit_id.Name = "Unit_id";
+            // 
+            // Default_sale_unit_id
+            // 
+            this.Default_sale_unit_id.HeaderText = "default_sale_unit_id";
+            this.Default_sale_unit_id.MinimumWidth = 6;
+            this.Default_sale_unit_id.Name = "Default_sale_unit_id";
+            // 
+            // Default_purchase_unit_id
+            // 
+            this.Default_purchase_unit_id.HeaderText = "default_purchase_unit_id";
+            this.Default_purchase_unit_id.MinimumWidth = 6;
+            this.Default_purchase_unit_id.Name = "Default_purchase_unit_id";
+            // 
+            // Cost
+            // 
+            this.Cost.HeaderText = "cost";
+            this.Cost.MinimumWidth = 6;
+            this.Cost.Name = "Cost";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            // 
+            // Image
+            // 
+            this.Image.HeaderText = "image";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            // 
+            // Supplier_id
+            // 
+            this.Supplier_id.HeaderText = "supplier_id";
+            this.Supplier_id.MinimumWidth = 6;
+            this.Supplier_id.Name = "Supplier_id";
             // 
             // Products
             // 
@@ -347,9 +403,16 @@
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.DataGridView tblProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brand_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Default_sale_unit_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Default_purchase_unit_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Supplier_id;
     }
 }

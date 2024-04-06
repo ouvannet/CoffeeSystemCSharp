@@ -24,7 +24,6 @@ namespace FinalProject
             MySqlConnection connection = new MySqlConnection(connectionString);
 
 
-
             string query = "SELECT * from product";
             MySqlCommand cmd = new MySqlCommand(query, connection);
 
@@ -74,9 +73,30 @@ namespace FinalProject
             cmd.Parameters.AddWithValue("@supplier_id",cboSupplier.Text);
             cmd.ExecuteNonQuery();
 
-            MessageBox.Show("dddd");
+            MessageBox.Show("Insert Successfuly");
 
-            
+            string query1 = "SELECT * from product";
+            MySqlCommand cmd1 = new MySqlCommand(query1, connection);
+
+            try
+            {
+                tblProduct.Rows.Clear();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd1);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    
+                    tblProduct.Rows.Add(row.ItemArray);
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }
 
 
             connection.Close();
